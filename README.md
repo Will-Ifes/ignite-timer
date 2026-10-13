@@ -2,17 +2,18 @@
 
 Temporizador de tarefas com histórico e persistência local.
 
-## Contexto e objetivo
-
 Projeto de estudo da trilha Ignite da Rocketseat: React, TypeScript, Context, reducer, React Router, React Hook Form, Zod e styled-components.
 
-## Funcionalidades presentes
+## Destaques
 
 - Criação de ciclos com tarefa e duração.
 - Contagem regressiva, interrupção e conclusão.
 - Histórico gravado no localStorage.
 
-## Por dentro do código
+<details>
+<summary><strong>Organização e código</strong></summary>
+
+### Por dentro do código
 
 | Código | O que observar |
 | --- | --- |
@@ -21,7 +22,12 @@ Projeto de estudo da trilha Ignite da Rocketseat: React, TypeScript, Context, re
 | [`src/pages/Home/components/Countdown/index.tsx`](src/pages/Home/components/Countdown/index.tsx) | Contagem regressiva. |
 | [`src/pages/History/index.tsx`](src/pages/History/index.tsx) | Histórico. |
 
-## Executar localmente
+</details>
+
+<details>
+<summary><strong>Executar e consultar</strong></summary>
+
+### Executar localmente
 
 Requer Node.js e npm compatíveis com as dependências versionadas.
 
@@ -34,9 +40,7 @@ npm run dev
 
 Abra o endereço informado pelo servidor no terminal.
 
-
-
-## Comandos disponíveis
+### Comandos disponíveis
 
 | Comando | Script versionado |
 | --- | --- |
@@ -45,11 +49,14 @@ Abra o endereço informado pelo servidor no terminal.
 | `npm run preview` | `vite preview` |
 | `npm run lint` | `eslint src --ext .ts,.tsx --fix` |
 
-Os comandos refletem o `package.json`. A existência de um script não comprova execução bem-sucedida no ambiente atual.
+</details>
 
-## Escopo e evolução
+<details>
+<summary>Escopo e referências</summary>
 
 Sem backend ou sincronização. A inicialização a partir do localStorage deve ser revisada para o primeiro acesso sem dados. Recuperação de armazenamento inválido e testes das transições também são próximos passos.
+
+</details>
 
 ---
 
