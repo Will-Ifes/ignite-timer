@@ -1,8 +1,19 @@
+<p align="center">
+  <img src="./.github/readme-cover.svg" alt="Focus Cycles: Tempo, transições e histórico de tarefas." width="100%" />
+</p>
+
 # Ignite Timer · ciclos de foco
 
 Temporizador de tarefas com histórico e persistência local.
 
 Projeto de estudo da trilha Ignite da Rocketseat: React, TypeScript, Context, reducer, React Router, React Hook Form, Zod e styled-components.
+
+## Explore o diferencial
+
+| Ponto de entrada | O que observar |
+| --- | --- |
+| [Estado com transições](src/reducers/cycles/reducer.ts) | O reducer explicita como um ciclo muda ao iniciar, interromper ou concluir. |
+| [Tempo e persistência](src/contexts/CyclesContext.tsx) | O contexto reúne ciclos e armazenamento local para alimentar as telas. |
 
 ## Destaques
 
