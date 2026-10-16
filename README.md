@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://will-ifes.github.io/ignite-timer/">
-    <img src="./.github/readme-cover.svg" alt="Ignite Timer. Ciclos de foco com pausa, retomada e histórico nos temas Papel e Floresta." width="100%" />
+    <img src="./.github/readme-cover.svg?v=20261016" alt="Ignite Timer. Ciclos de foco com pausa, retomada e histórico nos temas Papel e Floresta." width="100%" />
   </a>
 </p>
 
