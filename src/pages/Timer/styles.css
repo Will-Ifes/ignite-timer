@@ -1,0 +1,235 @@
+.timer {
+    display: grid;
+    justify-items: center;
+    gap: var(--wl-space-4);
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer__titulo,
+.timer__tarefa {
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+}
+
+.timer__concluido {
+    width: 100%;
+    padding: var(--wl-space-3) var(--wl-space-4);
+    border: 1px solid var(--wl-success);
+    border-radius: var(--wl-radius-control);
+    background: color-mix(in srgb, var(--wl-success) 10%, var(--wl-surface));
+}
+
+/* Anel */
+.anel {
+    position: relative;
+    width: min(320px, 80vw);
+    aspect-ratio: 1;
+    margin: var(--wl-space-4) 0;
+}
+
+.anel svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.anel circle {
+    fill: none;
+    stroke-width: 14;
+}
+
+.anel__trilho {
+    stroke: var(--wl-muted);
+}
+
+.anel__progresso {
+    stroke: var(--wl-accent);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 250ms linear;
+}
+
+.anel[data-pausado] .anel__progresso {
+    stroke: var(--wl-border);
+}
+
+.anel__centro {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    gap: var(--wl-space-1);
+}
+
+.timer__tempo {
+    font: 500 clamp(56px, 16vw, 80px) / 1 var(--wl-font-mono);
+    font-variant-numeric: tabular-nums;
+}
+
+.anel[data-pausado] .timer__tempo {
+    animation: piscar 1.4s infinite;
+}
+
+@keyframes piscar {
+    50% {
+        opacity: 0.45;
+    }
+}
+
+.timer__total {
+    color: var(--wl-secondary);
+    font: 500 14px var(--wl-font-mono);
+}
+
+.timer__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--wl-space-3);
+}
+
+.btn--grande {
+    min-height: 52px;
+    padding: 0 var(--wl-space-6);
+    font-size: 16px;
+}
+
+.btn.btn--perigo {
+    border-color: var(--wl-danger);
+    background: transparent;
+    color: var(--wl-danger);
+}
+
+.btn--perigo:hover {
+    background: color-mix(in srgb, var(--wl-danger) 10%, transparent);
+}
+
+/* Formulário */
+.novo {
+    display: grid;
+    gap: var(--wl-space-6);
+    width: 100%;
+    margin-top: var(--wl-space-4);
+    padding: var(--wl-space-6);
+    border: 1px solid var(--wl-line);
+    border-radius: var(--wl-radius-surface);
+    background: var(--wl-surface);
+    text-align: left;
+}
+
+.campo {
+    display: grid;
+    gap: 6px;
+    border: 0;
+}
+
+.campo label,
+.campo legend {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input {
+    min-height: calc(var(--wl-control) + 8px);
+    padding: 0 var(--wl-space-4);
+    border: 1px solid var(--wl-border);
+    border-radius: var(--wl-radius-control);
+    background: var(--wl-bg);
+    font-size: 16px;
+}
+
+.campo input::placeholder {
+    color: var(--wl-secondary);
+}
+
+.campo input[aria-invalid='true'] {
+    border-color: var(--wl-danger);
+}
+
+.campo__erro {
+    color: var(--wl-danger);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.duracao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wl-space-3);
+}
+
+.presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wl-space-2);
+}
+
+.presets button {
+    min-height: var(--wl-control);
+    padding: 0 var(--wl-space-4);
+    border: 1px solid var(--wl-border);
+    border-radius: 999px;
+    background: transparent;
+    font: 500 14px var(--wl-font-mono);
+}
+
+.presets button:hover {
+    background: var(--wl-muted);
+}
+
+.presets button[aria-pressed='true'] {
+    border-color: var(--wl-accent);
+    background: var(--wl-accent);
+    color: var(--wl-on);
+}
+
+.duracao__livre {
+    display: flex;
+    align-items: center;
+    gap: var(--wl-space-2);
+    margin: 0;
+    color: var(--wl-secondary);
+    font: 500 14px var(--wl-font-mono);
+}
+
+.duracao__livre input {
+    width: 88px;
+    font-family: var(--wl-font-mono);
+}
+
+.novo__comecar {
+    width: 100%;
+}
+
+.timer__notificacao {
+    display: flex;
+    align-items: center;
+    gap: var(--wl-space-2);
+    color: var(--wl-secondary);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .novo {
+        padding: var(--wl-space-4);
+    }
+
+    .duracao,
+    .presets {
+        width: 100%;
+    }
+
+    .presets {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .presets button {
+        padding: 0;
+    }
+}

@@ -1,0 +1,118 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font: 400 16px/1.5 var(--wl-font);
+    color: var(--wl-text);
+    background: var(--wl-bg);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 240ms var(--wl-ease), color 240ms var(--wl-ease);
+}
+
+input,
+button {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid var(--wl-accent);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Rótulo curto em mono, como os "01 / FUNDAÇÕES" do Will Labs */
+.eyebrow {
+    font: 500 12px/18px var(--wl-font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--wl-secondary);
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wl-space-2);
+    min-height: var(--wl-control);
+    padding: 0 var(--wl-space-4);
+    border: 1px solid transparent;
+    border-radius: var(--wl-radius-control);
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 120ms var(--wl-ease), border-color 120ms var(--wl-ease), color 120ms var(--wl-ease);
+}
+
+.btn--primary {
+    background: var(--wl-accent);
+    color: var(--wl-on);
+}
+
+.btn--primary:hover {
+    background: var(--wl-hover);
+}
+
+.btn--outline {
+    border-color: var(--wl-border);
+    background: transparent;
+}
+
+.btn--outline:hover {
+    background: var(--wl-muted);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--wl-secondary);
+}
+
+.btn--ghost:hover {
+    background: var(--wl-muted);
+    color: var(--wl-text);
+}
+
+.btn--icon {
+    width: 36px;
+    min-height: 36px;
+    padding: 0;
+}
+
+.btn--perigo:hover {
+    color: var(--wl-danger);
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

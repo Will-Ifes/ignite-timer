@@ -1,0 +1,179 @@
+.historico {
+    display: grid;
+    gap: var(--wl-space-6);
+}
+
+.historico__topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--wl-space-4);
+}
+
+.historico h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    letter-spacing: -0.02em;
+}
+
+.btn--perigo-texto:hover {
+    color: var(--wl-danger);
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--wl-line);
+    border-radius: var(--wl-radius-surface);
+    background: var(--wl-surface);
+}
+
+.numeros div {
+    display: grid;
+    gap: var(--wl-space-1);
+    padding: var(--wl-space-4) var(--wl-space-6);
+}
+
+.numeros div + div {
+    border-left: 1px solid var(--wl-line);
+}
+
+.numeros dt {
+    color: var(--wl-secondary);
+    font: 500 12px/18px var(--wl-font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.numeros dd {
+    font: 500 32px/1.1 var(--wl-font-mono);
+}
+
+.numeros small {
+    color: var(--wl-secondary);
+    font-size: 14px;
+}
+
+.segmentado {
+    display: inline-flex;
+    justify-self: start;
+    padding: 3px;
+    border: 1px solid var(--wl-border);
+    border-radius: var(--wl-radius-control);
+}
+
+.segmentado button {
+    min-height: calc(var(--wl-control) - 8px);
+    padding: 0 var(--wl-space-3);
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--wl-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.segmentado button[aria-pressed='true'] {
+    background: var(--wl-accent);
+    color: var(--wl-on);
+}
+
+/* A tabela rola dentro do próprio contêiner no celular */
+.tabela {
+    border: 1px solid var(--wl-line);
+    border-radius: var(--wl-radius-surface);
+    background: var(--wl-surface);
+    overflow-x: auto;
+}
+
+.tabela table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+    padding: var(--wl-space-3) var(--wl-space-4);
+    border-bottom: 1px solid var(--wl-line);
+    font-size: 14px;
+    text-align: left;
+}
+
+.tabela thead th {
+    color: var(--wl-secondary);
+    font: 500 12px var(--wl-font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.tabela tbody th {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.tabela tbody tr:last-child > * {
+    border-bottom: 0;
+}
+
+.tabela__acao {
+    width: 52px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wl-space-2);
+    font-weight: 500;
+}
+
+.status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--wl-border);
+}
+
+.status[data-status='concluido']::before {
+    background: var(--wl-success);
+}
+
+.status[data-status='interrompido']::before {
+    background: var(--wl-danger);
+}
+
+.status[data-status='andamento']::before {
+    background: var(--wl-accent);
+}
+
+.historico__vazio,
+.historico__sem-filtro {
+    padding: var(--wl-space-8) var(--wl-space-6);
+    color: var(--wl-secondary);
+    text-align: center;
+}
+
+.historico__vazio {
+    border: 2px dashed var(--wl-line);
+    border-radius: var(--wl-radius-surface);
+}
+
+.historico__vazio a {
+    color: var(--wl-accent);
+    font-weight: 600;
+}
+
+@media (max-width: 760px) {
+    .numeros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .numeros div:nth-child(3) {
+        border-left: 0;
+    }
+
+    .numeros div:nth-child(n + 3) {
+        border-top: 1px solid var(--wl-line);
+    }
+}
