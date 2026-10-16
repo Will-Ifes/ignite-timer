@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./.github/readme-cover.svg" alt="Focus Cycles: Tempo, transições e histórico de tarefas." width="100%" />
+  <a href="https://will-ifes.github.io/ignite-timer/">
+    <img src="./.github/readme-cover.svg" alt="Ignite Timer. Ciclos de foco com pausa, retomada e histórico nos temas Papel e Floresta." width="100%" />
+  </a>
 </p>
 
 # Ignite Timer · ciclos de foco
@@ -9,7 +11,11 @@ Timer no estilo Pomodoro: escolha uma tarefa e uma duração, foque até o anel 
 **React 19 · TypeScript · React Router 8 · React Hook Form + Zod 4 · Vitest** · [Ver online](https://will-ifes.github.io/ignite-timer/)
 
 <p align="center">
-  <img src="./.github/demo.gif" alt="Demonstração: um ciclo é pausado, retomado e chega ao fim com aviso de conclusão; um novo ciclo é preparado com o preset de 45 minutos; o histórico mostra estatísticas, filtra os concluídos e o tema muda para o escuro." width="720" />
+  <a href="https://will-ifes.github.io/ignite-timer/">
+    <img src="./.github/demo.gif" alt="Demonstração do timer revisado com pausa, retomada, conclusão, histórico e troca de tema. Clique para experimentar." width="720" />
+  </a>
+  <br />
+  <sub>Clique na demonstração para abrir o timer publicado.</sub>
 </p>
 
 ## O que dá para fazer

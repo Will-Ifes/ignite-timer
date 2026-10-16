@@ -22,7 +22,11 @@ afterEach(() => {
 })
 
 const usuario = () => userEvent.setup({ advanceTimers: vi.advanceTimersByTime })
-const avancar = (ms: number) => act(() => vi.advanceTimersByTime(ms))
+const avancar = async (ms: number) => {
+  await act(async () => {
+    await vi.advanceTimersByTimeAsync(ms)
+  })
+}
 
 async function comecar(user: ReturnType<typeof usuario>, tarefa: string, minutos?: number) {
   await user.type(screen.getByLabelText('Tarefa'), tarefa)
