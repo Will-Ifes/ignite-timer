@@ -1,0 +1,63 @@
+/* Tokens baseados no Will Labs (packages/tokens/themes.json): temas paper e forest, escala de 4 px */
+:root {
+    --wl-space-1: 4px;
+    --wl-space-2: 8px;
+    --wl-space-3: 12px;
+    --wl-space-4: 16px;
+    --wl-space-6: 24px;
+    --wl-space-8: 32px;
+    --wl-space-12: 48px;
+    --wl-radius-control: 8px;
+    --wl-radius-surface: 16px;
+    --wl-control: 40px;
+    --wl-font: 'Roboto', system-ui, sans-serif;
+    --wl-font-mono: 'Roboto Mono', ui-monospace, monospace;
+    --wl-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (pointer: coarse) {
+    :root {
+        --wl-control: 44px;
+    }
+}
+
+/* Papel claro */
+:root,
+:root[data-tema='paper'] {
+    color-scheme: light;
+    --wl-bg: #faf8f2;
+    --wl-surface: #fffdf8;
+    --wl-muted: #efe8dc;
+    --wl-text: #1c251e;
+    --wl-secondary: #5c665d;
+    --wl-border: #748472;
+    --wl-line: #ddd5c6;
+    --wl-accent: #3e5c3b;
+    --wl-hover: #2d462e;
+    --wl-on: #ffffff;
+    --wl-danger: #a32929;
+    --wl-success: #11702e;
+    --wl-diagonal-a: #3e5c3b;
+    --wl-diagonal-b: #5a3e2b;
+    --wl-shadow: 0 1px 2px rgb(28 37 30 / 6%), 0 8px 24px rgb(28 37 30 / 6%);
+}
+
+/* Floresta escura */
+:root[data-tema='forest'] {
+    color-scheme: dark;
+    --wl-bg: #101d16;
+    --wl-surface: #192c20;
+    --wl-muted: #253c2c;
+    --wl-text: #f1f5ea;
+    --wl-secondary: #c0ceba;
+    --wl-border: #809c82;
+    --wl-line: #2f4a37;
+    --wl-accent: #b9dba8;
+    --wl-hover: #d4ecc8;
+    --wl-on: #15251b;
+    --wl-danger: #ffb4a9;
+    --wl-success: #6fe0d8;
+    --wl-diagonal-a: #b9dba8;
+    --wl-diagonal-b: #e5c9a8;
+    --wl-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 12px 32px rgb(0 0 0 / 30%);
+}
